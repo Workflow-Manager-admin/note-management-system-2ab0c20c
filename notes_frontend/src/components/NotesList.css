@@ -1,0 +1,84 @@
+.NotesList {
+  width: 340px;
+  background: var(--bg, #f9fafe);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.NotesList__searchbar {
+  padding: 17px 15px 7px 18px;
+  background: var(--bg, #f9fafe);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+}
+.NotesList__search {
+  width: 100%;
+  background: #f1f7ff;
+  border: 1px solid var(--primary);
+  border-radius: 7px;
+  padding: 7px 13px;
+  font-size: 1rem;
+  color: var(--secondary);
+  outline: none;
+  transition: border-color 0.13s;
+}
+
+.NotesList__list {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+  overflow-y: auto;
+}
+
+.NotesList__empty {
+  color: var(--inactive);
+  font-style: italic;
+  margin: 19px 0;
+  text-align: center;
+}
+
+.NotesList__item {
+  border: none;
+  background: none;
+  padding: 11px 21px 11px 15px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  color: var(--secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.NotesList__item.selected, .NotesList__item:focus {
+  background: var(--primary);
+  color: #fff;
+}
+.NotesList__item-title {
+  font-weight: 600;
+  font-size: 1.03em;
+}
+.NotesList__item-category {
+  font-size: 0.93em;
+  color: var(--primary);
+}
+.NotesList__item-date {
+  font-size: 0.82em;
+  color: #bbb;
+  float: right;
+}
+
+@media (max-width: 900px) {
+  .NotesList {
+    width: 220px;
+  }
+}
+@media (max-width: 768px) {
+  .NotesList {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+}
